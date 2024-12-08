@@ -1,0 +1,149 @@
+/* Top Bar Styling */
+.top-bar {
+    background-color: #000; /* Blue background */
+    color: #fff; /* White text color */
+    font-size: 14px; /* Font size */
+}
+
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.0); /* Semi-transparent background */
+}
+
+.navbar .nav-link {
+    color: #fff ; /* White nav links */
+    transition: color 0.3s ease-in-out;
+}
+
+.active {
+    color: #f8d210 !important; /* Highlight on hover */
+}
+
+.navbar .nav-link:hover {
+    color: #f8d210 !important; /* Highlight on hover */
+}
+
+.navbar .navbar-brand h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Fullscreen Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.video-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    padding: 10px; /* For mobile padding */
+}
+
+.video-overlay h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.video-overlay p {
+    font-size: 1rem;
+}
+
+/* Button Styling */
+.btn-custom {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f8d210;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background-color: #c4a80e;
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+p{
+    margin:0px;
+}
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+    .navbar {
+        background: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .video-overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .video-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .btn-custom {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .navbar-brand h1 {
+        font-size: 1.2rem;
+    }
+
+    .video-overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .video-overlay p {
+        font-size: 0.8rem;
+    }
+
+    .btn-custom {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
